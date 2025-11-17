@@ -12,21 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
             // TODO: Substitua esta lógica de simulação por uma chamada fetch('/api/login')
             // O backend (Flask) deve validar o usuário e retornar o 'role' (admin ou employee)
 
-            // --- LÓGICA DE SIMULAÇÃO ---
+            // --- LÓGICA DE SIMULAÇÃO (CORRIGIDA) ---
             if (username === 'Administrador' && password === 'Impacto22') {
                 // Login de Admin
                 sessionStorage.setItem('userRole', 'admin');
                 sessionStorage.setItem('username', username);
                 window.location.href = 'index.html'; // Redireciona para o dashboard principal
             
-            } else if (username && password) {
-                // Simula login de funcionário (qualquer outra conta)
+            } else if (username === 'funcionario' && password === '123') {
+                // Login de Funcionário (PARA TESTE)
                 // No seu backend, você verificaria se é um usuário válido com 'role' de funcionário
                 sessionStorage.setItem('userRole', 'employee');
                 sessionStorage.setItem('username', username);
                 window.location.href = 'Funcionario.html'; // Redireciona para o dashboard limitado
             
             } else {
+                // AGORA SIM: Qualquer outra combinação dará erro
                 showToast('Usuário ou senha inválidos', 'error');
             }
             // --- FIM DA LÓGICA DE SIMULAÇÃO ---

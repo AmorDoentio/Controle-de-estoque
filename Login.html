@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Multimarcas - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900">
+
+    <!-- Container do Toast (Notificações) -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 space-y-3 w-full max-w-xs"></div>
+
+    <div class="login-container flex flex-col items-center justify-center min-h-screen">
+        <div class="w-full max-w-md bg-slate-100 rounded-lg shadow-xl p-8">
+            <h1 class="text-3xl font-bold mb-6 text-slate-900 text-center">Impacto Multimarcas</h1>
+            
+            <form id="loginForm">
+                <div class="space-y-4">
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-slate-700">Usuário</label>
+                        <input type="text" id="username" class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-700">Senha</label>
+                        <input type="password" id="password" class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm" required>
+                    </div>
+                    
+                    <div class="text-right">
+                        <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800">
+                            Esqueceu a senha?
+                        </a>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-slate-900 text-white px-5 py-3 rounded-lg shadow-md hover:bg-slate-700 transition-colors font-semibold">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>
